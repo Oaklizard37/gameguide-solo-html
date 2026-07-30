@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hollow Knight - Guía Completa de Hallownest</title>
+    <style>
+        /* Estilos generales */
+        body {
+            background-color: #0d0f12;
+            color: #dcdcdc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #e0e6ed;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 8px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #f1f5f9;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(15, 23, 42, 0.8);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            color: #38bdf8;
+            font-weight: bold;
+        }
+        .tip-box {
+            background-color: #1e293b;
+            border-left: 4px solid #38bdf8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #334155;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #1e293b;
+            color: #38bdf8;
+        }
+        tr:nth-child(even) {
+            background-color: #0f172a;
+        }
+        /* Botones generales */
+        .btn-back {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #334155;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn-back:hover {
+            background-color: #475569;
+        }
+        .btn-steam {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #171a21 0%, #1b2838 100%);
+            color: #66c0f4;
+            padding: 12px 24px;
+            border: 1px solid #2a475e;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+        .btn-steam:hover {
+            background: #2a475e;
+            color: #ffffff;
+            box-shadow: 0 0 12px rgba(102, 192, 244, 0.4);
+        }
+        .steam-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        /* Estilos multimedia */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .media-card {
+            background-color: #1e293b;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #334155;
+        }
+        .media-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .media-card p {
+            padding: 12px;
+            margin: 0;
+            font-size: 0.9em;
+            text-align: center;
+            color: #94a3b8;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            margin-top: 15px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        /* Categorías de Logros */
+        .achievement-category {
+            margin-top: 20px;
+        }
+        .achievement-category h3 {
+            border-bottom: none;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="btn-back">← Volver al Inicio</a>
+        <h1>HOLLOW KNIGHT</h1>
+        <!-- SECCIÓN DE COMPRA EN STEAM -->
+        <div class="steam-container">
+            <a href="https://store.steampowered.com/app/367520/Hollow_Knight/" target="_blank" class="btn-steam">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2a10 10 0 0 0-10 10c0 4.72 3.28 8.68 7.7 9.68l2.72-3.86a2.82 2.82 0 0 1-1.22-.28l-2.6 1.08a7.1 7.1 0 0 1-3.6-6.28c0-3.92 3.18-7.1 7.1-7.1s7.1 3.18 7.1 7.1c0 3.73-2.88 6.78-6.54 7.08l-2.73 3.88A9.98 9.98 0 0 0 12 22a10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/>
+                </svg>
+                Comprar Hollow Knight en Steam
+            </a>
+        </div>
+        <!-- SECCIÓN 1: HALLOWNEST -->
+        <div class="section">
+            <h2>1. El Reino de Hallownest (Lore y Contexto)</h2>
+            <p><strong>Hallownest</strong> es un vasto y antiguo reino de insectos ubicado en las profundidades de la tierra. Fundado por el <span class="highlight">Rey Pálido</span>, el reino prometió intelecto y libertad de la mente a las criaturas que habitaran en él. Sin embargo, una fuerza antigua conocida como la <span class="highlight">Infección</span> (emanada por la diosa <em>Radiance</em>) comenzó a controlar las mentes de los bichos, volviéndolos agresivos y despojándolos de su voluntad.</p>
+            <p>Para contener la Infección, el Rey Pálido creó a los <strong>Vasos</strong> (criaturas compuestas de Vacío y el alma del rey) para sellarla dentro del Vaso Primario: el <em>Hollow Knight</em>. Tu objetivo como el Caballero es adentrarte en el reino caído, desentrañar sus misterios y decidir el destino de Hallownest.</p>
+        </div>
+           <h2>2. Galería de Hallownest y Video Guías</h2>
+            <div class="media-grid">
+                <div class="media-card">
+                    <img src="https://images.uncrate.com/user_alloc/blog_featured_tiles/hollow-knight-nintendo-switch-1.jpg" alt="Mapa de Hallownest">
+                    <p>Vista de las intrincadas rutas y bellos paisajes del reino subterráneo.</p>
+                </div>
+                <div class="media-card">
+                    <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/v1/ncom/en_US/games/switch/h/hollow-knight-switch/hero?v=f1998e16" alt="Caballero vs Jefe">
+                    <p>Enfrentamiento contra los imponentes jefes de Hallownest.</p>
+                </div>
+            </div>
+            <h3 style="margin-top: 30px;">Trailer Oficial del Juego</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/UAO2urG23S4" title="Hollow Knight Trailer" allowfullscreen></iframe>
+            </div>
+            <h3 style="margin-top: 30px;">Guía de Inicio: Consejos para Comenzar</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/0G3_m8C-5dE" title="Hollow Knight Beginner Guide" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="section">
+            <h2>3. Guía de Mapas y Rutas Principales</h2>
+            <p>Para no perderte en Hallownest, siempre debes buscar a <strong>Cornifer el Cartógrafo</strong> en cada nueva zona para comprarle el mapa base, y luego adquirir el lápiz y las plumas en la tienda de Iselda en Bocasucia (Dirtmouth).</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Zona</th>
+                        <th>Objeto / Habilidad Clave</th>
+                        <th>Jefe Principal / Evento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Cruces Olvidados</strong></td>
+                        <td>Espíritu Vengativo (Hechizo)</td>
+                        <td>Falso Caballero</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sendero Verde</strong></td>
+                        <td>Capa de Ala de Polilla (Dash)</td>
+                        <td>Hornet (Encuentro 1)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Páramos de Espenas</strong></td>
+                        <td>Garra de Mantis (Escalar paredes)</td>
+                        <td>Señores de las Mantis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ciudad de Lágrimas</strong></td>
+                        <td>Aguijón Espiral, Salto de Desolación</td>
+                        <td>Maestro de Almas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cumbre de Cristal</strong></td>
+                        <td>Corazón de Cristal (Super Dash)</td>
+                        <td>Guardián de Cristal</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cuenca Antigua</strong></td>
+                        <td>Alas de Monarca (Doble salto)</td>
+                        <td>Vasija Rota</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nido Profundo</strong></td>
+                        <td>Linterna de Lumélula (Requerida)</td>
+                        <td>Nosk / Soñadora Herrah</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Jardines de la Reina</strong></td>
+                        <td>Llave del Amor / Pasajes</td>
+                        <td>Traidor Lord</td>
+                    </tr>
+                    <tr>
+                        <td><strong>El Abismo</strong></td>
+                        <td>Manto de Sombra / Chillido del Abismo</td>
+                        <td>Lugar de origen de las Vasijas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="section">
+            <h2>4. Guía para Desbloquear el 100% de los Logros</h2>
+            <p>Hollow Knight cuenta con <strong>63 logros en Steam</strong>. A continuación se detallan los requisitos de los logros más representativos y complejos organizados por categoría:</p>
+            <div class="achievement-category">
+                <h3>🏆 Logros de Historia y Finales</h3>
+                <ul>
+                    <li><strong>El Hollow Knight:</strong> Derrota al Hollow Knight y completa el juego.</li>
+                    <li><strong>Sellos Olvidados:</strong> Conviértete en el nuevo Vaso reemplazando al Hollow Knight habiendo conseguido el Amuleto "Corazón del Vacío".</li>
+                    <li><strong>No más Sueños:</strong> Derrota a Radiance tras entrar en la mente del Hollow Knight con el Aguijón Gentil.</li>
+                    <li><strong>Aceptación:</strong> Absorbe a los tres Soñadores (Lurien, Monomon y Herrah).</li>
+                </ul>
+            </div>
+            <div class="achievement-category">
+                <h3>🏆 Logros de Colección y Porcentaje</h3>
+                <ul>
+                    <li><strong>Completista:</strong> Alcanza el 100% de finalización del juego.</li>
+                    <li><strong>Completista Puro:</strong> Alcanza el 112% de finalización del juego (requiere contenido de los DLCs).</li>
+                    <li><strong>Rescatador de Larvas:</strong> Salva a las 46 larvas (Grubs) atrapadas en frascos por todo Hallownest.</li>
+                    <li><strong>Encantado:</strong> Colecciona los 40 amuletos del juego base.</li>
+                    <li><strong>Coleccionista de Máscaras:</strong> Consigue todos los fragmentos para tener la vida máxima (9 máscaras).</li>
+                </ul>
+            </div>
+            <div class="achievement-category">
+                <h3>🏆 Logros de Reto y Velocidad (Speedrun)</h3>
+                <ul>
+                    <li><strong>Speedrun 1:</strong> Completa el juego en menos de 10 horas.</li>
+                    <li><strong>Speedrun 2:</strong> Completa el juego en menos de 5 horas.</li>
+                    <li><strong>Speedrun al 100%:</strong> Alcanza el 100% de juego completado en menos de 20 horas.</li>
+                    <li><strong>Alma de Acero:</strong> Completa el juego en el modo "Alma de Acero" (sin morir ni una sola vez).</li>
+                    <li><strong>Corazón de Acero:</strong> Alcanza el 100% de completado en modo Alma de Acero.</li>
+                </ul>
+            </div>
+            <div class="achievement-category">
+                <h3>🏆 Logros de Desafíos Avanzados (DLCs)</h3>
+                <ul>
+                    <li><strong>Prueba del Sensato:</strong> Completa la tercera y más difícil prueba en el Coliseo de los Sensatos.</li>
+                    <li><strong>Gran Rito:</strong> Derrota al Rey Pesadilla Grimm al final del ritual de la Compañía de Grimm.</li>
+                    <li><strong>Aceptación del Hogar de Dioses:</strong> Completa los primeros cuatro Panteones en el Hogar de Dioses.</li>
+                    <li><strong>Abraza el Vacío:</strong> Completa el quinto y último panteón ("Panteón de Hallownest"), el reto más difícil del juego.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <h2>5. Desglose del Porcentaje (112%)</h2>
+            <p>El juego base ofrece hasta un 100%, pero con los DLCs gratuitos el porcentaje máximo alcanza el <strong>112%</strong>:</p>
+            <ul>
+                <li><strong>Mejoras del Aguijón (4%):</strong> 4 mejoras con el Forjaguijones usando Mineral Pálido.</li>
+                <li><strong>Hechizos y Mejoras (6%):</strong> Espíritu Vengativo, Salto de Desolación, Espectros Aulladores (y sus versiones oscuras).</li>
+                <li><strong>Habilidades del Caballero (7%):</strong> Capa de Ala de Polilla, Garra de Mantis, Corazón de Cristal, Alas de Monarca, Manto de Sombra, Lágrima de Isma, Marca del Rey.</li>
+                <li><strong>Artes del Aguijón (3%):</strong> Gran Corte, Corte Ciclón y Corte Veloz.</li>
+                <li><strong>Amuletos (40%):</strong> 40 amuletos en total (1% por amuleto).</li>
+                <li><strong>Fragmentos de Máscara (4%):</strong> 16 fragmentos en total (4 máscaras extra).</li>
+                <li><strong>Fragmentos de Vasija (3%):</strong> 9 fragmentos en total (3 vasijas de alma extra).</li>
+                <li><strong>Soñadores (3%):</strong> Monomon la Maestra, Lurien el Vigilante, y Herrah la Bestia.</li>
+                <li><strong>Jefes Requeridos (17%):</strong> Derrotar a los jefes principales del juego base.</li>
+                <li><strong>Guerreros Espectrales (7%):</strong> Xero, Gorb, Elder Hu, Marmu, No Eyes, Galien, Markoth.</li>
+                <li><strong>Contenido de DLCs (18%):</strong> Panteones del Hogar de Dioses, Coliseo de los Sensatos (3 pruebas), Linterna de Grimm y Rey Pesadilla Grimm.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>6. Consejos y Tips Esenciales</h2>
+            <div class="tip-box">
+                <h3>💡 Práctica el "Pogo" (Golpe hacia abajo)</h3>
+                <p>Al saltar sobre un enemigo, pinchos o ciertos obstáculos, presiona hacia abajo y ataca. El impacto te impulsará hacia arriba. Esta técnica es fundamental para acceder a zonas secretas sin habilidades avanzadas y para esquivar jefes fácilmente.</p>
+            </div>
+            <div class="tip-box">
+                <h3>💡 Gestiona bien los Amuletos</h3>
+                <p>Combinaciones muy recomendadas:</p>
+                <ul>
+                    <li><strong>Para Explorar:</strong> Brújula Caprichosa + Atrapa-almas + Piedra de Chamán + Marca del Orgullo.</li>
+                    <li><strong>Para Jefes difíciles:</strong> Fuerza Irrompible + Piedra de Chamán + Corte Rápido + Sombra Afilada.</li>
+                </ul>
+            </div>
+            <div class="tip-box">
+                <h3>💡 Salva a las 46 Larvas (Grubs)</h3>
+                <p>Encontrar a todas las larvas atrapadas en frascos te otorgará una gran cantidad de Geo, amuletos vitales (como <em>Canto de Larva</em> y <em>Elegía del Larvero</em>) y un Mineral Pálido.</p>
+            </div>
+            <div class="tip-box">
+                <h3>💡 Guarda Geo en el Banco antes de aventurarte</h3>
+                <p>Si mueres dos veces seguidas sin recuperar tu sombra, perderás todo el Geo que llevas encima. Usa el banco en los Cañones de la Niebla de Millibelle para guardar tu dinero de forma segura.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

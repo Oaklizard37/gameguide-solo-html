@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft | GameGuide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+body{
+    background-color: #111827;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Encabezado */
+header{
+    text-align: center;
+    padding: 30px;
+}
+nav{
+    margin-top:20px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-size:18px;
+}
+main{
+    width:90%;
+    margin:auto;
+}
+h2{
+    text-align:center;
+    margin-top:60px;
+    color:#00e5ff;
+}
+.tarjeta{
+    background-color:#1f2937;
+    padding:20px;
+    margin:25px;
+    border-radius:15px;
+    text-align:center;
+}
+.ruta{
+    margin: 60px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+.guia-paso{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 60px 0;
+}
+.guia-invertido{
+    flex-direction: row-reverse;
+}
+.guia-imagen{
+    width: 420px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+.guia-contenido{
+    flex: 1;
+}
+.guia-contenido h3{
+    font-size: 28px;
+    color: #66ff66;
+    margin-bottom: 15px;
+}
+.guia-contenido p{
+    font-size: 18px;
+    line-height: 1.7;
+}
+.guia-contenido ul{
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.guia-contenido li{
+    margin-bottom: 10px;
+}
+/* Pie de imagen */
+figure{
+    margin: 0;
+}
+figcaption{
+    text-align: center;
+    margin-top: 12px;
+    color: #bfbfbf;
+    font-size: 14px;
+    font-style: italic;
+}
+.mob-card{
+    background: transparent;
+}
+/* ===== Estilos añadidos para minecraft.html ===== */
+.banner{
+    text-align: center;
+}
+.banner img{
+    border-radius: 10px;
+    max-height: 350px;
+    object-fit: cover;
+}
+.informacion-rapida table,
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #1f2937;
+    border-radius: 10px;
+    overflow: hidden;
+}
+table th,
+table td{
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #374151;
+}
+table th{
+    color: #66ff66;
+    width: 220px;
+}
+.paso{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 60px 0;
+}
+.paso.inverso{
+    flex-direction: row-reverse;
+}
+.paso img{
+    width: 420px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+.paso .contenido{
+    flex: 1;
+}
+.paso .contenido h3{
+    font-size: 26px;
+    color: #66ff66;
+    margin-bottom: 15px;
+}
+.paso .contenido p{
+    font-size: 18px;
+    line-height: 1.7;
+}
+.paso .contenido ul{
+    margin-top: 15px;
+    padding-left: 20px;
+}
+details{
+    background-color: #1f2937;
+    border-radius: 10px;
+    margin: 15px auto;
+    padding: 15px 20px;
+    max-width: 1200px;
+}
+details summary{
+    cursor: pointer;
+    font-size: 20px;
+    color: #00e5ff;
+}
+.mob-card{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+.mob-imagen img{
+    width: 200px;
+    border-radius: 10px;
+}
+.mob-info{
+    flex: 1;
+}
+iframe{
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+details h3{
+    color: #00e5ff;
+    margin-top: 25px;
+}
+details h4{
+    color: #ffb84d;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+.info-card{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+.info-card img{
+    width: 220px;
+    max-width: 40%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+    flex-shrink: 0;
+}
+.info-card p{
+    flex: 1;
+    font-size: 17px;
+    line-height: 1.6;
+}
+@media (max-width: 700px){
+    .info-card{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .info-card img{
+        max-width: 100%;
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+    <h1>🎮 GameGuide</h1>
+    <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#juegos">Juegos</a>
+        <a href="acerca.html">Acerca de</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+<main>
+<!-- =============================== -->
+<section class="banner">
+    <img src="../imagenes/minecraft/banner.jpg"
+         alt="Minecraft Banner"
+         width="100%">
+    <h2>Minecraft</h2>
+    <p>
+        Construye • Explora • Sobrevive
+    </p>
+</section>
+<section class="informacion-rapida">
+<h2>Información rápida</h2>
+<table>
+<tr>
+<th>Desarrollador</th>
+<td>Mojang Studios</td>
+</tr>
+<tr>
+<th>Lanzamiento</th>
+<td>2011</td>
+</tr>
+<tr>
+<th>Género</th>
+<td>Sandbox / Supervivencia</td>
+</tr>
+<tr>
+<th>Modos</th>
+<td>Individual y Multijugador</td>
+</tr>
+<tr>
+<th>Plataformas</th>
+<td>
+PC • Xbox • PlayStation • Nintendo Switch • Android • iOS
+</td>
+</tr>
+</table>
+</section>
+<section>
+<h2>Resumen</h2>
+<p>
+Minecraft es un videojuego de construcción de tipo «mundo abierto» 
+o en inglés sandbox creado originalmente por el sueco Markus Persson,
+que creó posteriormente Mojang Studios. El juego consiste en un mundo generado de manera procedural,
+compuesto por bloques tridimensionales que representan distintos materiales,
+</p>
+</section>
+<section class="ruta">
+    <h2>🌳 Ruta recomendada</h2>
+    <!-- Paso 1 -->
+    <div class="paso">
+        <img src="../imagenes/minecraft/ruta/madera.jpg"
+             alt="Conseguir madera">
+        <div class="contenido">
+            <h3>🌳 Paso 1 - Consigue madera</h3>
+            <p>
+                Lo primero que debes hacer es conseguir troncos para fabricar
+                tus primeras herramientas.
+            </p>
+            <ul>
+                <li>✔ Rompe un árbol.</li>
+                <li>✔ Fabrica tablones.</li>
+                <li>✔ Crea una mesa de trabajo.</li>
+                <li>✔ Fabrica un pico de madera.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Paso 2 -->
+    <div class="paso inverso">
+        <img src="../imagenes/minecraft/ruta/casa.jpg"
+             alt="Construir refugio">
+        <div class="contenido">
+            <h3>🏠 Paso 2 - Construye un refugio</h3>
+            <p>
+                Antes de que llegue la noche construye una casa sencilla para
+                protegerte de los mobs.
+            </p>
+            <ul>
+                <li>✔ Coloca una cama.</li>
+                <li>✔ Fabrica un horno.</li>
+                <li>✔ Guarda tus objetos.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Paso 3 -->
+    <div class="paso">
+        <img src="../imagenes/minecraft/ruta/hierro.jpg"
+             alt="Conseguir hierro">
+        <div class="contenido">
+            <h3>⛏ Paso 3 - Consigue hierro</h3>
+            <p>
+                Explora una cueva y consigue suficiente hierro para fabricar
+                herramientas y armadura.
+            </p>
+            <ul>
+                <li>✔ Pico de hierro.</li>
+                <li>✔ Escudo.</li>
+                <li>✔ Cubo.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<details>
+<summary>🌎 Primeros pasos</summary>
+<p>
+Como primera cosa que se debe hacer es conseguir mader para empezar a fabricar herramientas y construir un refugio. Luego, se recomienda explorar cuevas para conseguir hierro y otros minerales.
+hecho lo anterior, se puede empezar a explorar el mundo y buscar biomas, mobs, encantamientos y jefes.
+</p>
+</details>
+<details>
+<summary>🌳 Biomas</summary>
+<table>
+<tr>
+<th>Bioma</th>
+<th>Características</th>
+</tr>
+<tr>
+<td>Bosques</td>
+<td>Abundante madera y animales pasivos, ideal para empezar una partida.</td>
+</tr>
+<tr>
+<td>Desiertos</td>
+<td>Templos con cofres, pirámides y aldeas de arenisca.</td>
+</tr>
+<tr>
+<td>Junglas</td>
+<td>Vegetación densa, templos ocultos y ocelotes/loros exclusivos.</td>
+</tr>
+<tr>
+<td>Océanos</td>
+<td>Monumentos oceánicos, naufragios y ruinas sumergidas.</td>
+</tr>
+<tr>
+<td>Pantanos</td>
+<td>Cabañas de brujas y árboles con enredaderas.</td>
+</tr>
+<tr>
+<td>Taigas</td>
+<td>Bosques de píceas, frecuentes lobos e iglús en la variante nevada.</td>
+</tr>
+<tr>
+<td>Badlands</td>
+<td>Terracota de colores y buena cantidad de oro expuesto.</td>
+</tr>
+<tr>
+<td>Cherry Grove</td>
+<td>Árboles de cerezo rosados, puramente decorativo pero muy popular para construir.</td>
+</tr>
+<tr>
+<td>Deep Dark</td>
+<td>Bioma profundo con Sculk y el temible Warden; máxima precaución.</td>
+</tr>
+</table>
+</details>
+<!-- =============================== -->
+<!-- ========================================= -->
+<!--               CREEPER                     -->
+<!-- ========================================= -->
+<details class="mob">
+    <summary>😈 Mobs Hostiles</summary>
+    <p>Atacan al jugador sin necesidad de ser provocados. Son la principal amenaza durante la noche y en cuevas.</p>
+    <section class="mob-card">
+        <div class="mob-imagen">
+            <img src="../imagenes/minecraft/mobs/creeper.png"
+                 alt="Creeper">
+        </div>
+        <div class="mob-info">
+            <h2>💥 Creeper</h2>
+            <p>
+                El Creeper es uno de los enemigos más conocidos de Minecraft.
+                Se acerca silenciosamente al jugador y explota cuando está cerca.
+            </p>
+            <table>
+                <tr>
+                    <th>❤️ Vida</th>
+                    <td>20 (10 corazones)</td>
+                </tr>
+                <tr>
+                    <th>⚔ Daño</th>
+                    <td>
+                        Fácil: 11 <br>
+                        Normal: 22 <br>
+                        Difícil: 32
+                    </td>
+                </tr>
+                <tr>
+                    <th>🛡 Armadura</th>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <th>⭐ Experiencia</th>
+                    <td>5 XP</td>
+                </tr>
+                <tr>
+                    <th>📦 Drops</th>
+                    <td>
+                        • Pólvora (0-2)
+                    </td>
+                </tr>
+                <tr>
+                    <th>📍 Aparición</th>
+                    <td>
+                        Overworld
+                    </td>
+                </tr>
+                <tr>
+                    <th>🌎 Biomas</th>
+                    <td>
+                        Todos los biomas del Overworld
+                    </td>
+                </tr>
+                <tr>
+                    <th>🌙 Condiciones</th>
+                    <td>
+                        Nivel de luz 0 y bloques sólidos.
+                    </td>
+                </tr>
+                <tr>
+                    <th>🔥 Inmune al fuego</th>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <th>☀ Se quema con el sol</th>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <th>👾 Tipo</th>
+                    <td>Hostil</td>
+                </tr>
+                <tr>
+                    <th>⭐ Rareza</th>
+                    <td>Común</td>
+                </tr>
+            </table>
+            <h3>💡 Consejos</h3>
+            <ul>
+                <li>Mantén la distancia.</li>
+                <li>Utiliza un arco.</li>
+                <li>Un escudo puede bloquear parte de la explosión.</li>
+            </ul>
+        </div>
+    </section>
+    <hr>
+<section class="mob-card">
+        <div class="mob-imagen">
+            <img src="../imagenes/minecraft/mobs/zombie.png"
+                 alt="Zombie">
+        </div>
+        <div class="mob-info">
+            <h2>🧟 Zombie</h2>
+            <p>
+                El mob hostil más común del juego. Camina lentamente hacia el jugador
+                y ataca cuerpo a cuerpo. De noche aparece en grandes cantidades.
+            </p>
+            <table>
+                <tr><th>❤️ Vida</th><td>20 (10 corazones)</td></tr>
+                <tr><th>⚔ Daño</th><td>Fácil: 2 <br> Normal: 3 <br> Difícil: 4</td></tr>
+                <tr><th>🛡 Armadura</th><td>2</td></tr>
+                <tr><th>⭐ Experiencia</th><td>5 XP</td></tr>
+                <tr><th>📦 Drops</th><td>• Carne podrida (0-2) <br> • Raro: zanahoria, papa o lingote de hierro</td></tr>
+                <tr><th>📍 Aparición</th><td>Overworld</td></tr>
+                <tr><th>🌎 Biomas</th><td>Todos los biomas del Overworld; variantes en aldeas del desierto, nieve y jungla</td></tr>
+                <tr><th>🌙 Condiciones</th><td>Nivel de luz 0. Puede convertirse en Zombi Ahogado bajo el agua.</td></tr>
+                <tr><th>🔥 Inmune al fuego</th><td>No</td></tr>
+                <tr><th>☀ Se quema con el sol</th><td>Sí (a menos que use casco)</td></tr>
+                <tr><th>👾 Tipo</th><td>Hostil</td></tr>
+                <tr><th>⭐ Rareza</th><td>Muy común</td></tr>
+            </table>
+            <h3>💡 Consejos</h3>
+            <ul>
+                <li>Evita las hordas nocturnas en espacios abiertos.</li>
+                <li>Los zombis se agrupan si detectan al jugador; usa puertas para bloquearlos.</li>
+                <li>Puedes curar a un Zombi Aldeano con Debilidad + Manzana Dorada.</li>
+            </ul>
+        </div>
+    </section>
+    <hr>
+<section class="mob-card">
+        <div class="mob-imagen">
+            <img src="../imagenes/minecraft/mobs/esqueleto.png"
+                 alt="Esqueleto">
+        </div>
+        <div class="mob-info">
+            <h2>🏹 Esqueleto</h2>
+            <p>
+                Enemigo a distancia que dispara flechas. Suele merodear en cuevas
+                oscuras y es peligroso en zonas abiertas por su alcance.
+            </p>
+            <table>
+                <tr><th>❤️ Vida</th><td>20 (10 corazones)</td></tr>
+                <tr><th>⚔ Daño</th><td>Fácil: 2 <br> Normal: 3 <br> Difícil: 5 (varía con la distancia)</td></tr>
+                <tr><th>🛡 Armadura</th><td>0</td></tr>
+                <tr><th>⭐ Experiencia</th><td>5 XP</td></tr>
+                <tr><th>📦 Drops</th><td>• Huesos (0-2) <br> • Flechas (0-2) <br> • Raro: su arco</td></tr>
+                <tr><th>📍 Aparición</th><td>Overworld</td></tr>
+                <tr><th>🌎 Biomas</th><td>Todos, especialmente en cuevas y minas abandonadas</td></tr>
+                <tr><th>🌙 Condiciones</th><td>Nivel de luz 0</td></tr>
+                <tr><th>🔥 Inmune al fuego</th><td>No</td></tr>
+                <tr><th>☀ Se quema con el sol</th><td>Sí</td></tr>
+                <tr><th>👾 Tipo</th><td>Hostil (a distancia)</td></tr>
+                <tr><th>⭐ Rareza</th><td>Común</td></tr>
+            </table>
+            <h3>💡 Consejos</h3>
+            <ul>
+                <li>Acércate en zigzag o cúbrete tras bloques para evitar flechas.</li>
+                <li>Un escudo bloquea la mayoría de sus disparos.</li>
+                <li>De noche puede montar una araña, formando un Jinete Araña.</li>
+            </ul>
+        </div>
+    </section>
+    <hr>
+<section class="mob-card">
+        <div class="mob-imagen">
+            <img src="../imagenes/minecraft/mobs/bruja.png"
+                 alt="Bruja">
+        </div>
+        <div class="mob-info">
+            <h2>🧙 Bruja</h2>
+            <p>
+                Lanza pociones dañinas a distancia (veneno, debilidad, lentitud) y
+                se bebe pociones de curación o resistencia al fuego para sobrevivir.
+            </p>
+            <table>
+                <tr><th>❤️ Vida</th><td>26 (13 corazones)</td></tr>
+                <tr><th>⚔ Daño</th><td>Variable según la poción arrojada</td></tr>
+                <tr><th>🛡 Armadura</th><td>0</td></tr>
+                <tr><th>⭐ Experiencia</th><td>5 XP</td></tr>
+                <tr><th>📦 Drops</th><td>• Botella de cristal, azúcar, redstone, araña, pólvora o palo (según poción)</td></tr>
+                <tr><th>📍 Aparición</th><td>Overworld</td></tr>
+                <tr><th>🌎 Biomas</th><td>Pantanos (cabañas de bruja)</td></tr>
+                <tr><th>🌙 Condiciones</th><td>Nivel de luz 0, o dentro de una cabaña de bruja</td></tr>
+                <tr><th>🔥 Inmune al fuego</th><td>No</td></tr>
+                <tr><th>☀ Se quema con el sol</th><td>No</td></tr>
+                <tr><th>👾 Tipo</th><td>Hostil</td></tr>
+                <tr><th>⭐ Rareza</th><td>Poco común</td></tr>
+            </table>
+            <h3>💡 Consejos</h3>
+            <ul>
+                <li>Acércate en zigzag para esquivar sus pociones arrojadizas.</li>
+                <li>Un escudo o leche pueden anular sus efectos negativos.</li>
+                <li>Peligrosa en combate cuerpo a cuerpo prolongado por su curación.</li>
+            </ul>
+        </div>
+    </section>
+    <hr>
+<section class="mob-card">
+        <div class="mob-imagen">
+            <img src="../imagenes/minecraft/mobs/slime.png"
+                 alt="Slime">
+        </div>
+        <div class="mob-info">
+            <h2>🟩 Slime</h2>
+            <p>
+                Mob saltarín que se divide en versiones más pequeñas al morir.
+                Aparece en pantanos y en «chunks de limo» bajo tierra.
+            </p>
+            <table>
+                <tr><th>❤️ Vida</th><td>Grande: 16 <br> Mediano: 4 <br> Pequeño: 1</td></tr>
+                <tr><th>⚔ Daño</th><td>Grande: 4 <br> Mediano: 2 <br> Pequeño: 0</td></tr>
+                <tr><th>🛡 Armadura</th><td>0</td></tr>
+                <tr><th>⭐ Experiencia</th><td>Grande: 4 · Mediano: 2 · Pequeño: 1 XP</td></tr>
+                <tr><th>📦 Drops</th><td>• Bola de limo (0-2, solo tamaño pequeño)</td></tr>
+                <tr><th>📍 Aparición</th><td>Overworld</td></tr>
+                <tr><th>🌎 Biomas</th><td>Pantanos (con luna llena) y chunks de limo bajo el nivel Y=40</td></tr>
+                <tr><th>🌙 Condiciones</th><td>Se divide en 2-4 slimes más pequeños al recibir el golpe final</td></tr>
+                <tr><th>🔥 Inmune al fuego</th><td>No</td></tr>
+                <tr><th>☀ Se quema con el sol</th><td>No</td></tr>
+                <tr><th>👾 Tipo</th><td>Hostil</td></tr>
+                <tr><th>⭐ Rareza</th><td>Poco común (depende del chunk)</td></tr>
+            </table>
+            <h3>💡 Consejos</h3>
+            <ul>
+                <li>Los slimes grandes se dividen: prepárate para varios golpes finales.</li>
+                <li>Ideales para granjas automáticas de bolas de limo (útiles para correas y pistones pegajosos).</li>
+                <li>Los chunks de limo se pueden localizar con Chunkbase.</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Para añadir otro mob, copia cualquier bloque <section class="mob-card"> completo
+         (desde <section class="mob-card"> hasta </section>) y cambia solo los datos. -->
+    <h3>📋 Otras criaturas hostiles</h3>
+    <table>
+    <tr>
+    <th>Criatura</th>
+    <th>Aparición</th>
+    <th>Nota</th>
+    </tr>
+    <tr><td>Ahogado (Drowned)</td><td>Océanos y ríos</td><td>Lanza tridentes; deja caer perlas de Ender ocasionalmente.</td></tr>
+    <tr><td>Husk</td><td>Desiertos</td><td>Variante del zombi que no se quema con el sol; aplica Hambre al golpear.</td></tr>
+    <tr><td>Zombi Aldeano</td><td>Overworld</td><td>Puede curarse con Debilidad + Manzana Dorada para volver a ser aldeano.</td></tr>
+    <tr><td>Esqueleto Fósil (Stray)</td><td>Biomas helados</td><td>Sus flechas aplican Lentitud.</td></tr>
+    <tr><td>Esqueleto Wither</td><td>Fortalezas del Nether</td><td>Aplica el efecto Marchitez; necesario para invocar al Wither.</td></tr>
+    <tr><td>Araña de cueva</td><td>Minas abandonadas</td><td>Más pequeña pero su veneno es peligroso.</td></tr>
+    <tr><td>Blaze</td><td>Fortalezas del Nether</td><td>Vuela y lanza bolas de fuego; deja Varillas de Blaze.</td></tr>
+    <tr><td>Ghast</td><td>Nether</td><td>Flota y dispara bolas de fuego explosivas a distancia.</td></tr>
+    <tr><td>Cubo de Magma</td><td>Nether</td><td>Salta constantemente; se divide como el Slime.</td></tr>
+    <tr><td>Piglin Brute</td><td>Bastiones del Nether</td><td>Siempre hostil, ignora el oro que lleves puesto.</td></tr>
+    <tr><td>Zoglin</td><td>Nether</td><td>Hoglin convertido; ataca todo, incluidos otros mobs.</td></tr>
+    <tr><td>Silverfish</td><td>Cuevas y monumentos oceánicos</td><td>Se esconde dentro de bloques de piedra infestada.</td></tr>
+    <tr><td>Endermite</td><td>Overworld (raro)</td><td>Puede aparecer al usar Perlas de Ender.</td></tr>
+    <tr><td>Vex</td><td>Mansiones del Bosque</td><td>Invocado por el Evoker; vuela y atraviesa bloques.</td></tr>
+    <tr><td>Evoker</td><td>Mansiones del Bosque, raids</td><td>Invoca Vex y ataques de garras de Vindicator con magia.</td></tr>
+    <tr><td>Vindicator</td><td>Mansiones del Bosque, raids</td><td>Ataca con hacha cuerpo a cuerpo, muy dañino.</td></tr>
+    <tr><td>Pillager</td><td>Avanzadillas de saqueadores</td><td>Ataca a distancia con ballesta; inicia raids en aldeas.</td></tr>
+    <tr><td>Ravager</td><td>Raids y mansiones</td><td>Bestia enorme montada por Pillagers durante los asaltos.</td></tr>
+    <tr><td>Guardian</td><td>Monumentos oceánicos</td><td>Dispara rayos láser; inflige Minería Lenta cerca del monumento.</td></tr>
+    <tr><td>Elder Guardian</td><td>Monumentos oceánicos</td><td>Jefe menor; aplica Minería Lenta a todo el monumento.</td></tr>
+    <tr><td>Shulker</td><td>Ciudades del End</td><td>Dispara proyectiles que causan levitación; deja caparazones para Cajas de Shulker.</td></tr>
+    <tr><td>Warden</td><td>Deep Dark</td><td>Ciego pero detecta vibraciones; el enemigo más peligroso del juego.</td></tr>
+    </table>
+</details>
+<!-- =============================== -->
+<details class="mob">
+    <summary>😐 Mobs Neutrales</summary>
+    <p>Solo atacan si el jugador los provoca primero (o bajo ciertas condiciones específicas).</p>
+    <section class="mob-card">
+        <div class="mob-imagen">
+            <img src="../imagenes/minecraft/mobs/arana.png"
+                 alt="Araña">
+        </div>
+        <div class="mob-info">
+            <h2>🕷 Araña</h2>
+            <p>
+                Mob neutral con luz alta y hostil en la oscuridad. Puede trepar
+                muros y techos, lo que la hace difícil de esquivar en espacios cerrados.
+            </p>
+            <table>
+                <tr><th>❤️ Vida</th><td>16 (8 corazones)</td></tr>
+                <tr><th>⚔ Daño</th><td>Fácil: 2 <br> Normal: 2 <br> Difícil: 3</td></tr>
+                <tr><th>🛡 Armadura</th><td>0</td></tr>
+                <tr><th>⭐ Experiencia</th><td>5 XP</td></tr>
+                <tr><th>📦 Drops</th><td>• Hilo (0-2) <br> • Ojo de araña (raro)</td></tr>
+                <tr><th>📍 Aparición</th><td>Overworld</td></tr>
+                <tr><th>🌎 Biomas</th><td>Todos, sobre todo cuevas y bosques nocturnos</td></tr>
+                <tr><th>🌙 Condiciones</th><td>Nivel de luz 0; neutral si el nivel de luz es alto</td></tr>
+                <tr><th>🔥 Inmune al fuego</th><td>No</td></tr>
+                <tr><th>☀ Se quema con el sol</th><td>No</td></tr>
+                <tr><th>👾 Tipo</th><td>Neutral / Hostil según la luz</td></tr>
+                <tr><th>⭐ Rareza</th><td>Común</td></tr>
+            </table>
+            <h3>💡 Consejos</h3>
+            <ul>
+                <li>Puede escalar paredes, así que no confíes en muros para bloquearla.</li>
+                <li>De noche ataca sin provocación previa.</li>
+                <li>Buena fuente de hilo para fabricar telarañas y arcos.</li>
+            </ul>
+        </div>
+    </section>
+    <hr>
+<section class="mob-card">
+        <div class="mob-imagen">
+            <img src="../imagenes/minecraft/mobs/enderman.png"
+                 alt="Enderman">
+        </div>
+        <div class="mob-info">
+            <h2>🟪 Enderman</h2>
+            <p>
+                Mob alto y neutral que se teletransporta. Se vuelve hostil si el
+                jugador lo mira a los ojos o lo ataca. Puede recoger y colocar bloques.
+            </p>
+            <table>
+                <tr><th>❤️ Vida</th><td>40 (20 corazones)</td></tr>
+                <tr><th>⚔ Daño</th><td>Fácil: 4 <br> Normal: 7 <br> Difícil: 10</td></tr>
+                <tr><th>🛡 Armadura</th><td>0</td></tr>
+                <tr><th>⭐ Experiencia</th><td>5 XP</td></tr>
+                <tr><th>📦 Drops</th><td>• Perla de Ender (0-1)</td></tr>
+                <tr><th>📍 Aparición</th><td>Overworld, Nether y End</td></tr>
+                <tr><th>🌎 Biomas</th><td>Todos; muy común en el End</td></tr>
+                <tr><th>🌙 Condiciones</th><td>Se enfurece si lo miras a los ojos o lo golpeas</td></tr>
+                <tr><th>🔥 Inmune al fuego</th><td>No</td></tr>
+                <tr><th>☀ Se quema con el sol</th><td>No, pero huye del agua y la lluvia teletransportándose</td></tr>
+                <tr><th>👾 Tipo</th><td>Neutral (hostil si se provoca)</td></tr>
+                <tr><th>⭐ Rareza</th><td>Poco común</td></tr>
+            </table>
+            <h3>💡 Consejos</h3>
+            <ul>
+                <li>Usa un casco de calabaza para mirarlo sin provocarlo.</li>
+                <li>Pelea en espacios de 2 bloques de alto para limitar su teletransporte.</li>
+                <li>La lluvia o el agua lo hacen huir constantemente.</li>
+            </ul>
+        </div>
+    </section>
+    <h3>📋 Otras criaturas neutrales</h3>
+    <table>
+    <tr>
+    <th>Criatura</th>
+    <th>Aparición</th>
+    <th>Nota</th>
+    </tr>
+    <tr><td>Lobo (Wolf)</td><td>Bosques y taigas</td><td>Se puede domesticar con huesos; ataca si el dueño es atacado.</td></tr>
+    <tr><td>Oso Polar</td><td>Biomas helados</td><td>Se enfurece si te acercas a sus crías.</td></tr>
+    <tr><td>Llama</td><td>Montañas y sabanas</td><td>Escupe si es atacada; puede transportar cofres.</td></tr>
+    <tr><td>Panda</td><td>Junglas de bambú</td><td>Algunas variantes son agresivas de nacimiento.</td></tr>
+    <tr><td>Abeja</td><td>Llanuras, bosques de flores</td><td>Pica si se le molesta el panal o la colmena.</td></tr>
+    <tr><td>Piglin</td><td>Nether</td><td>Neutral si llevas oro equipado; comercia objetos del Nether.</td></tr>
+    <tr><td>Piglin Zombificado</td><td>Nether</td><td>Solo ataca si es golpeado primero, luego todo el grupo se enfurece.</td></tr>
+    <tr><td>Hoglin</td><td>Nether</td><td>Huye de los hongos deformados; ataca si se le acerca sin ellos.</td></tr>
+    <tr><td>Gólem de Hierro</td><td>Aldeas / invocado</td><td>Defiende a los aldeanos; neutral con el jugador salvo que lo ataques.</td></tr>
+    <tr><td>Cabra (Goat)</td><td>Montañas</td><td>Puede embestir ocasionalmente al jugador o a otros mobs.</td></tr>
+    <tr><td>Delfín</td><td>Océanos</td><td>Ayuda a encontrar tesoros y da Gracia del Delfín al nadar cerca.</td></tr>
+    </table>
+</details>
+<!-- =============================== -->
+<details class="mob">
+    <summary>🐄 Mobs Pasivos</summary>
+    <p>Nunca atacan al jugador. Suelen ser fuente de alimento, recursos o compañía.</p>
+    <table>
+    <tr>
+    <th>Criatura</th>
+    <th>Aparición</th>
+    <th>Nota</th>
+    </tr>
+    <tr><td>Vaca</td><td>Llanuras y bosques</td><td>Da carne y cuero; se puede ordeñar con un cubo.</td></tr>
+    <tr><td>Cerdo</td><td>Llanuras y bosques</td><td>Da chuletas de cerdo; se puede montar con una silla y zanahoria en caña.</td></tr>
+    <tr><td>Oveja</td><td>Llanuras y bosques</td><td>Da lana (esquilable) y carne; se puede teñir de 16 colores.</td></tr>
+    <tr><td>Gallina</td><td>Llanuras y bosques</td><td>Pone huevos, da carne y plumas.</td></tr>
+    <tr><td>Conejo</td><td>Llanuras, bosques, desiertos, tundras</td><td>Da carne y patas de conejo (ingrediente de poción de salto).</td></tr>
+    <tr><td>Caballo</td><td>Llanuras y sabanas</td><td>Domesticable y montable; variantes de color y velocidad.</td></tr>
+    <tr><td>Burro / Mula</td><td>Llanuras y sabanas</td><td>Pueden llevar cofres además de ser montados.</td></tr>
+    <tr><td>Gato</td><td>Aldeas / domesticado de Ocelote</td><td>Ahuyenta a los Creepers y Phantoms cerca del jugador.</td></tr>
+    <tr><td>Ocelote</td><td>Junglas</td><td>Se puede domesticar con pescado crudo, convirtiéndose en gato.</td></tr>
+    <tr><td>Loro</td><td>Junglas</td><td>Imita sonidos de mobs cercanos; puede posarse en el hombro.</td></tr>
+    <tr><td>Tortuga</td><td>Playas de arena</td><td>Pone huevos en la playa; da Caparazón de Tortuga.</td></tr>
+    <tr><td>Zorro</td><td>Taigas</td><td>Tímido con el jugador; caza gallinas y conejos.</td></tr>
+    <tr><td>Murciélago</td><td>Cuevas</td><td>Puramente decorativo, no da ningún drop.</td></tr>
+    <tr><td>Calamar</td><td>Océanos y ríos</td><td>Da tinta de calamar (bolsas de tinta).</td></tr>
+    <tr><td>Calamar Brillante</td><td>Cuevas con agua</td><td>Variante luminiscente; da tinta luminosa.</td></tr>
+    <tr><td>Ajolote</td><td>Cuevas con agua (bioma Lush)</td><td>Ayuda en combates acuáticos si se transporta en cubo.</td></tr>
+    <tr><td>Rana</td><td>Pantanos, biomas cálidos</td><td>Come luciérnagas y pequeños slimes; da huevas de rana.</td></tr>
+    <tr><td>Renacuajo</td><td>Agua de pantanos</td><td>Se convierte en rana con el tiempo.</td></tr>
+    <tr><td>Strider</td><td>Nether (lava)</td><td>Se puede montar sobre lava con una caña con hongo deformado.</td></tr>
+    <tr><td>Aldeano</td><td>Aldeas</td><td>Comercia objetos según su profesión y nivel.</td></tr>
+    <tr><td>Mercader Errante</td><td>Aparece aleatoriamente</td><td>Vende objetos exóticos a cambio de esmeraldas.</td></tr>
+    <tr><td>Gólem de Nieve</td><td>Invocado por el jugador</td><td>Lanza bolas de nieve a mobs hostiles; se derrite en biomas cálidos.</td></tr>
+    <tr><td>Allay</td><td>Mazmorras del Trial Chamber</td><td>Recoge objetos duplicados y los lleva al jugador si suena una nota.</td></tr>
+    <tr><td>Camello</td><td>Desiertos</td><td>Monta a dos jugadores a la vez; puede saltar muy alto.</td></tr>
+    <tr><td>Sniffer</td><td>Invocado desde huevo antiguo</td><td>Desentierra semillas antiguas excavando el suelo.</td></tr>
+    </table>
+</details>
+<!-- =============================== -->
+<details>
+<summary>⛏ Minerales</summary>
+<table>
+<tr>
+<th>Mineral</th>
+<th>Pico mínimo</th>
+<th>Uso principal</th>
+</tr>
+<tr>
+<td>Carbón</td>
+<td>Ninguno (a mano o cualquier pico)</td>
+<td>Antorchas y combustible</td>
+</tr>
+<tr>
+<td>Hierro</td>
+<td>Piedra</td>
+<td>Herramientas, armadura y blindaje</td>
+</tr>
+<tr>
+<td>Oro</td>
+<td>Hierro</td>
+<td>Encantamientos rápidos, comercio con piglins</td>
+</tr>
+<tr>
+<td>Diamante</td>
+<td>Hierro</td>
+<td>Herramientas y armadura de alto nivel</td>
+</tr>
+<tr>
+<td>Esmeralda</td>
+<td>Hierro</td>
+<td>Comercio con aldeanos</td>
+</tr>
+<tr>
+<td>Netherita</td>
+<td>Diamante</td>
+<td>Mejora final de herramientas y armadura</td>
+</tr>
+<tr>
+<td>Redstone</td>
+<td>Hierro</td>
+<td>Circuitos y mecanismos</td>
+</tr>
+<tr>
+<td>Lapislázuli</td>
+<td>Piedra</td>
+<td>Mesa de encantamientos y tinte</td>
+</tr>
+</table>
+</details>
+<!-- =============================== -->
+<details>
+<summary>⚔ Herramientas y Armaduras</summary>
+<h3>🔨 Herramientas</h3>
+<p>Existen 5 tipos de herramientas —Pico, Hacha, Pala, Azada y Espada— fabricables en 6 materiales, de más débil a más fuerte:</p>
+<table>
+<tr>
+<th>Material</th>
+<th>Durabilidad (pico)</th>
+<th>Velocidad</th>
+<th>Encantabilidad</th>
+</tr>
+<tr><td>Madera</td><td>59</td><td>Baja</td><td>15</td></tr>
+<tr><td>Piedra</td><td>131</td><td>Media</td><td>5</td></tr>
+<tr><td>Hierro</td><td>250</td><td>Alta</td><td>14</td></tr>
+<tr><td>Oro</td><td>32</td><td>Muy alta (pero poco duradero)</td><td>22</td></tr>
+<tr><td>Diamante</td><td>1561</td><td>Muy alta</td><td>10</td></tr>
+<tr><td>Netherita</td><td>2031</td><td>Muy alta</td><td>15</td></tr>
+</table>
+<p><em>Nota: el Oro se rompe rápido pero tiene la mejor "encantabilidad", ideal para encantamientos raros con pocos libros.</em></p>
+<h3>🛡 Armaduras</h3>
+<p>Una armadura completa consta de 4 piezas: Casco, Pechera, Pantalones y Botas.</p>
+<table>
+<tr>
+<th>Material</th>
+<th>Puntos de armadura (set completo)</th>
+<th>Durabilidad relativa</th>
+<th>Notas</th>
+</tr>
+<tr><td>Cuero</td><td>7</td><td>Baja</td><td>Se puede teñir de cualquier color.</td></tr>
+<tr><td>Cota de malla</td><td>12</td><td>Media</td><td>No craftable normalmente; se consigue por comercio o cofres.</td></tr>
+<tr><td>Oro</td><td>11</td><td>Baja</td><td>Mejor encantabilidad; frena el enfado de los Piglins en el Nether.</td></tr>
+<tr><td>Hierro</td><td>15</td><td>Media-alta</td><td>Buen equilibrio para el early-mid game.</td></tr>
+<tr><td>Diamante</td><td>20</td><td>Alta</td><td>Estándar para el combate avanzado.</td></tr>
+<tr><td>Netherita</td><td>20</td><td>Muy alta</td><td>Máxima resistencia; no flota en lava.</td></tr>
+<tr><td>Caparazón de tortuga</td><td>2 (solo casco)</td><td>Media</td><td>Da Respiración Acuática 10s al equiparse.</td></tr>
+</table>
+<h3>🗡 Armas y utilidades</h3>
+<ul>
+<li><strong>Espadas:</strong> mayor daño cuerpo a cuerpo; con encantamiento Filo pueden llegar a 1 golpe en mobs débiles.</li>
+<li><strong>Arcos:</strong> daño a distancia acumulable según tiempo de carga.</li>
+<li><strong>Ballestas:</strong> más daño por disparo pero recarga más lenta; permite Multidisparo.</li>
+<li><strong>Escudos:</strong> bloquean casi todo el daño frontal, incluidas flechas y explosiones de Creeper.</li>
+<li><strong>Tridente:</strong> arma exclusiva obtenida de los Ahogados, puede encantarse con Lealtad o Riptide.</li>
+</ul>
+</details>
+<!-- =============================== -->
+<details>
+<summary>✨ Encantamientos</summary>
+<h3>📖 Guía: cómo encantar tu equipo</h3>
+<p>Hay tres formas de conseguir encantamientos: la Mesa de Encantamientos, el comercio con Aldeanos Bibliotecarios, y la pesca o cofres de botín.</p>
+<h4>1. Prepara la Mesa de Encantamientos</h4>
+<ul>
+<li>Fabrícala con 1 Libro, 2 Diamantes y 4 Obsidiana.</li>
+<li>Colócala y rodéala con hasta <strong>15 estanterías</strong> para desbloquear el nivel máximo (30).</li>
+<li>Las estanterías deben estar separadas por 1 bloque de aire de la mesa, en un anillo de 5x5 (se puede apilar hasta 2 de alto).</li>
+</ul>
+<h4>2. Encanta el objeto</h4>
+<ul>
+<li>Coloca el objeto (herramienta, arma o armadura) en la mesa junto con Lapislázuli.</li>
+<li>Se ofrecen 3 opciones de encantamiento aleatorias, cada una consume niveles de experiencia y lapislázuli.</li>
+<li>Cuantas más estanterías tengas, mejores (y más altos) serán los encantamientos disponibles.</li>
+</ul>
+<h4>3. Combina con el Yunque</h4>
+<ul>
+<li>Un Yunque permite combinar dos objetos encantados, o un objeto con un libro encantado, para sumar sus encantamientos.</li>
+<li>También sirve para renombrar objetos y reparar herramientas gastando experiencia.</li>
+<li>Cada uso sucesivo aumenta el coste de experiencia (y puede volverse "demasiado caro").</li>
+</ul>
+<h4>4. Ten en cuenta las incompatibilidades</h4>
+<ul>
+<li>Filo, Golpe (Smite) y Perjuicio de Artrópodos son excluyentes entre sí.</li>
+<li>Toque de Seda y Fortuna no pueden coexistir.</li>
+<li>Infinidad y Reparación (Mending) son incompatibles en arcos.</li>
+<li>Los distintos tipos de Protección (normal, fuego, proyectiles, explosión) tampoco se combinan entre sí.</li>
+</ul>
+<p><em>💡 Consejo: consigue Reparación (Mending) pescando o comerciando con bibliotecarios; combinado con experiencia constante, tu equipo nunca se rompe.</em></p>
+<h3>📋 Lista de encantamientos por categoría</h3>
+<p><strong>Armadura:</strong> Protección, Aspecto Ígneo, Respiración Acuática, Afinidad Acuática, Espinas, Caída de Pluma, Agilidad Acuática.</p>
+<p><strong>Armas:</strong> Filo, Perjuicio de Artrópodos, Percance, Fuego Infernal, Botín, Retroceso.</p>
+<p><strong>Arco/Ballesta:</strong> Poder, Perforación, Multidisparo, Retroceso, Llama, Infinidad, Carga Rápida.</p>
+<p><strong>Herramientas:</strong> Eficiencia, Fortuna, Toque de Seda, Suerte del Pescador, Atracción.</p>
+<p><strong>Generales:</strong> Irrompibilidad, Reparación, Ligadura, Maldición de Desaparición.</p>
+</details>
+<!-- =============================== -->
+<details>
+<summary>🌌 Dimensiones</summary>
+<div class="info-card">
+    <img src="../imagenes/minecraft/dimensiones/overworld.png" alt="Overworld">
+    <p><strong>Overworld:</strong> El mundo principal, donde comienza la partida y se encuentran la mayoría de biomas.</p>
+</div>
+<div class="info-card">
+    <img src="../imagenes/minecraft/dimensiones/nether.png" alt="Nether">
+    <p><strong>Nether:</strong> Dimensión infernal accesible con un portal de obsidiana; hogar de los piglins, el bastión y la Fortaleza del Nether.</p>
+</div>
+<div class="info-card">
+    <img src="../imagenes/minecraft/dimensiones/end.png" alt="End">
+    <p><strong>End:</strong> Dimensión final a la que se llega mediante un portal activado con Ojos de Ender; aquí habita el Dragón del End.</p>
+</div>
+</details>
+<!-- =============================== -->
+<details>
+<summary>🐉 Jefes</summary>
+<div class="info-card">
+    <img src="../imagenes/minecraft/jefes/enderdragon.png" alt="Ender Dragon">
+    <p><strong>Ender Dragon:</strong> Jefe final del End. Vuela sobre torres de cristal que la curan; hay que destruirlas antes de atacarla directamente.</p>
+</div>
+<div class="info-card">
+    <img src="../imagenes/minecraft/jefes/wither.png" alt="Wither">
+    <p><strong>Wither:</strong> Jefe invocable en el Overworld o Nether con 3 cráneos de Wither Skeleton y arena de almas. Dispara cráneos explosivos y aplica el efecto Marchitez.</p>
+</div>
+</details>
+<!-- =============================== -->
+<details>
+<summary>🏆 Guía de Logros</summary>
+<table>
+<tr>
+<th>Categoría</th>
+<th>Ejemplos</th>
+</tr>
+<tr>
+<td>Historia del juego</td>
+<td>Conseguir madera, fabricar herramientas de piedra, entrar al Nether.</td>
+</tr>
+<tr>
+<td>Aventura</td>
+<td>Derrotar mobs, explorar templos, encontrar un cofre en cada estructura.</td>
+</tr>
+<tr>
+<td>Nether</td>
+<td>Comerciar con piglins, conseguir todos los materiales del Nether, derrotar al Wither.</td>
+</tr>
+<tr>
+<td>El End</td>
+<td>Derrotar al Dragón del End, encontrar una ciudad del End, obtener el Elytra.</td>
+</tr>
+<tr>
+<td>Husbandry (Cría y agricultura)</td>
+<td>Domesticar animales, cultivar todas las semillas, criar todos los mobs reproducibles.</td>
+</tr>
+</table>
+</details>
+<details>
+<summary>🌾 Granjas automáticas</summary>
+<ul>
+<li><strong>Hierro:</strong> Granja basada en aldeanos que generan lingotes de hierro automáticamente.</li>
+<li><strong>Comida:</strong> Granjas de cultivos con riego automático y recolección por pistones o agua.</li>
+<li><strong>Experiencia:</strong> Trampas de mobs o granjas de zombis/esqueletos que generan XP al eliminarlos.</li>
+<li><strong>Cultivos:</strong> Sistemas de trigo, zanahorias, papas o caña de azúcar totalmente automatizados.</li>
+<li><strong>Mob Farm:</strong> Estructuras que aprovechan los spawners naturales de mobs hostiles para farmear drops.</li>
+</ul>
+</details>
+<!-- =============================== -->
+<details>
+<summary>🏗 Construcciones útiles</summary>
+<ul>
+<li><strong>Casas:</strong> Refugios básicos hasta mansiones decorativas, la primera prioridad al empezar.</li>
+<li><strong>Almacenes:</strong> Sistemas de cofres organizados, idealmente con clasificadores automáticos.</li>
+<li><strong>Granjas:</strong> Estructuras dedicadas a cultivos, animales o recursos automatizados.</li>
+<li><strong>Puentes:</strong> Útiles para cruzar el Nether o conectar zonas alejadas de la base.</li>
+<li><strong>Torres:</strong> Puntos de observación o de teletransporte rápido (torres élitra).</li>
+</ul>
+</details>
+<!-- =============================== -->
+<details>
+<summary>🧰 Herramientas útiles</summary>
+<ul>
+<li>
+<a href="https://www.chunkbase.com/"
+target="_blank">
+Chunkbase
+</a>
+</li>
+<li>
+<a href="https://minecraft.wiki/"
+target="_blank">
+Minecraft Wiki
+</a>
+</li>
+<li>
+<a href="https://minecraft.tools/enchant-calculator"
+target="_blank">
+Calculadora de encantamientos
+</a>
+</li>
+<li>
+Generador de comandos
+</li>
+<li>
+Generador de Seeds
+</li>
+</ul>
+</details>
+<!-- =============================== -->
+<details>
+<summary>📥 Descargas recomendadas</summary>
+<ul>
+<li><a href="https://fabricmc.net/" target="_blank">Fabric</a> — cargador de mods ligero, ideal para mejoras de rendimiento.</li>
+<li><a href="https://files.minecraftforge.net/" target="_blank">Forge</a> — el cargador de mods más usado, con el mayor catálogo disponible.</li>
+<li><a href="https://modrinth.com/mod/sodium" target="_blank">Sodium</a> — mod de optimización que mejora drásticamente el rendimiento gráfico.</li>
+<li><a href="https://irisshaders.dev/" target="_blank">Iris</a> — motor de shaders compatible con Sodium.</li>
+<li><a href="https://modrinth.com/" target="_blank">Modrinth</a> — plataforma para descargar mods, shaders y resource packs.</li>
+<li><a href="https://www.curseforge.com/minecraft" target="_blank">CurseForge</a> — la plataforma de mods más grande y veterana.</li>
+</ul>
+</details>
+<!-- =============================== -->
+<details>
+<summary>🎥 Videos</summary>
+    <article>
+        <h3>🌳 Guía para principiantes</h3>
+        <p>Video recomendado para quienes recién empiezan a jugar Minecraft.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5ZV0IAtUzEw?si=l4dofMlsmrqKW-xN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>⚔ Cómo derrotar al Ender Dragon</h3>
+        <p>Video con la estrategia completa para el jefe final del End.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/srliebzONGI?si=x667K_6xxWieASBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+</details>
+<section>
+<h2>Comprar Minecraft</h2>
+<p>
+Consigue el juego desde su página oficial.
+</p>
+<a href="https://www.minecraft.net/"
+target="_blank">
+Comprar Minecraft
+</a>
+</section>
+<section>
+<h2>Juegos relacionados</h2>
+<ul>
+<li><a href="hollowknight.html">Hollow Knight</a></li>
+<li><a href="cuphead.html">Cuphead</a></li>
+</ul>
+</section>
+</main>
+<footer>
+<p>
+© 2026 GameGuide
+</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuphead | GameGuide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+body{
+    background-color: #111827;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Encabezado */
+header{
+    text-align: center;
+    padding: 30px;
+}
+nav{
+    margin-top:20px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-size:18px;
+}
+main{
+    width:90%;
+    margin:auto;
+}
+h2{
+    text-align:center;
+    margin-top:60px;
+    color:#00e5ff;
+}
+.tarjeta{
+    background-color:#1f2937;
+    padding:20px;
+    margin:25px;
+    border-radius:15px;
+    text-align:center;
+}
+.ruta{
+    margin: 60px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+.guia-paso{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 60px 0;
+}
+.guia-invertido{
+    flex-direction: row-reverse;
+}
+.guia-imagen{
+    width: 420px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+.guia-contenido{
+    flex: 1;
+}
+.guia-contenido h3{
+    font-size: 28px;
+    color: #66ff66;
+    margin-bottom: 15px;
+}
+.guia-contenido p{
+    font-size: 18px;
+    line-height: 1.7;
+}
+.guia-contenido ul{
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.guia-contenido li{
+    margin-bottom: 10px;
+}
+/* Pie de imagen */
+figure{
+    margin: 0;
+}
+figcaption{
+    text-align: center;
+    margin-top: 12px;
+    color: #bfbfbf;
+    font-size: 14px;
+    font-style: italic;
+}
+.mob-card{
+    background: transparent;
+}
+/* ===== Estilos añadidos para minecraft.html ===== */
+.banner{
+    text-align: center;
+}
+.banner img{
+    border-radius: 10px;
+    max-height: 350px;
+    object-fit: cover;
+}
+.informacion-rapida table,
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #1f2937;
+    border-radius: 10px;
+    overflow: hidden;
+}
+table th,
+table td{
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #374151;
+}
+table th{
+    color: #66ff66;
+    width: 220px;
+}
+.paso{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 60px 0;
+}
+.paso.inverso{
+    flex-direction: row-reverse;
+}
+.paso img{
+    width: 420px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+.paso .contenido{
+    flex: 1;
+}
+.paso .contenido h3{
+    font-size: 26px;
+    color: #66ff66;
+    margin-bottom: 15px;
+}
+.paso .contenido p{
+    font-size: 18px;
+    line-height: 1.7;
+}
+.paso .contenido ul{
+    margin-top: 15px;
+    padding-left: 20px;
+}
+details{
+    background-color: #1f2937;
+    border-radius: 10px;
+    margin: 15px auto;
+    padding: 15px 20px;
+    max-width: 1200px;
+}
+details summary{
+    cursor: pointer;
+    font-size: 20px;
+    color: #00e5ff;
+}
+.mob-card{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+.mob-imagen img{
+    width: 200px;
+    border-radius: 10px;
+}
+.mob-info{
+    flex: 1;
+}
+iframe{
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+details h3{
+    color: #00e5ff;
+    margin-top: 25px;
+}
+details h4{
+    color: #ffb84d;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+.info-card{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+.info-card img{
+    width: 220px;
+    max-width: 40%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+    flex-shrink: 0;
+}
+.info-card p{
+    flex: 1;
+    font-size: 17px;
+    line-height: 1.6;
+}
+@media (max-width: 700px){
+    .info-card{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .info-card img{
+        max-width: 100%;
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+    <h1>🎮 GameGuide</h1>
+    <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#juegos">Juegos</a>
+        <a href="acerca.html">Acerca de</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Cuphead</h2>
+        <img src="../imagenes/cuphead.jpg" alt="Cuphead" width="250">
+        <p>
+            Uno de los juegos más desafiantes de los últimos años,
+            inspirado en las caricaturas de 1930.
+        </p>
+    </section>
+<aside>
+    <h3>📋 Contenido</h3>
+    <ul>
+        <li><a href="#ficha">Ficha Técnica</a></li>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#jefes">Jefes y Niveles</a></li>
+        <li><a href="#monedas">Monedas</a></li>
+        <li><a href="#armas">Armas</a></li>
+        <li><a href="#secretos">Secretos</a></li>
+        <li><a href="#steam">Comprar en Steam</a></li>
+    </ul>
+</aside>
+<section id="ficha">
+    <h2>Ficha Técnica</h2>
+    <table>
+        <tr>
+            <th>Título</th>
+            <td>Cuphead</td>
+        </tr>
+        <tr>
+            <th>Desarrollador</th>
+            <td>Studio MDHR</td>
+        </tr>
+        <tr>
+            <th>Lanzamiento</th>
+            <td>29 de septiembre de 2017</td>
+        </tr>
+        <tr>
+            <th>Género</th>
+            <td>Run and Gun</td>
+        </tr>
+        <tr>
+            <th>Modos</th>
+            <td>Un jugador y cooperativo local</td>
+        </tr>
+    </table>
+</section>
+<section id="historia">
+    <h2>Historia</h2>
+    <p>
+        Cuphead y Mugman son dos hermanos que viven tranquilamente en la Isla Tintero. Un día, desobedecen los consejos del Anciano Tetera y llegan al casino del Diablo. Tras perder una apuesta, quedan endeudados y deben recorrer la isla derrotando a distintos jefes para recuperar los contratos de las almas y saldar su deuda.
+    </p>
+</section>
+<section id="jefes">
+    <h2>🏝️ Isla Tintero I</h2>
+    <article>
+        <h3>🌲 Locuras del bosque</h3>
+        <p>Primer nivel run and gun del juego, con enemigos y obstáculos variados. Ideal para aprender las mecánicas básicas.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1ZwwBt__mnI?si=18hPglXCdyS8ZW_x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🔵 Goopy Le Grande</h3>
+        <p>Un slime gigante y saltarín. Buen jefe para practicar el esquive y el salto sobre sus ataques de baba.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Wenstg4CUcA?si=o3rD0u8JijtD1GZ_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🐸 Ribby y Croaks (Ranas Boxeadoras)</h3>
+        <p>Dos ranas boxeadoras con distintos estilos de ataque: una rápida y ágil, la otra lenta pero contundente.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/66ojTCjD2Hw?si=dJPBD2fUgnU5BLiS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🌻 Cagney Carnation</h3>
+        <p>Jefe vegetal con ataques variados y patrones de movimiento que se vuelven más complejos en cada fase.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qrkkSCKB4qQ?si=SFbv0MvApLwOLmGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🌳 Problemas en las copas de los árboles (Treetop Trouble)</h3>
+        <p>Segundo nivel run and gun del juego, con una cantidad considerable de enemigos y obstáculos que requieren reflejos rápidos.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/L1UU35jd4ak?si=0JnZqu_zYpBbRdCf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>✈️ Hilda Berg</h3>
+        <p>Primer nivel completamente aéreo. Un zeppelin que se transforma en distintas figuras a lo largo del combate.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Cq_bZ6MRFCQ?si=j-gHudr8R1EjDCCS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🥕 The Root Pack</h3>
+        <p>Trío de verduras traviesas. El combate premia mantener la calma y aprender a distinguir a los tres personajes.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/r4tm4YAA4i4?si=umlIb2Cn2ZlOn7Lo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>👻 Mausoleo I (opcional)</h3>
+        <p>Primer nivel de mausoleo, con enemigos fantasmas que requieren un dominio considerable de la mecánica de parry.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Uwst49IviaA?si=uTwptSHnwgxgrdFV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <h2>🏝️ Isla Tintero II</h2>
+    <article>
+        <h3>🎪 Funhouse Frazzle (Frazzle de la Casa de la Diversión)</h3>
+        <p>Tercer nivel run and gun del juego, un tanto complicado por la variedad de enemigos y obstáculos.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2al3HNH3KAQ?si=si7-SmTY5eBaaP0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🍬 Princesa de Caramelo (Baroness Von Bon Bon)</h3>
+        <p>Primer jefe de la Isla Tintero II. Un enemigo formidable con ataques rápidos y patrones de movimiento complicados.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/iUYwfj86JG4?si=xCkgl5o70-0m57K2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🎩 Djimmy el Grande (Djimmi the Great)</h3>
+        <p>Segundo jefe de la Isla Tintero II. Nos presenta un desafío considerable con sus ataques mágicos y movimientos impredecibles.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/STMtYHuk6y8?si=hQyHzJ47TXihwwuh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🤡 Beepy el Payaso (Beppi the Clown)</h3>
+        <p>Tercer jefe de la Isla Tintero II. Es un enemigo desafiante con habilidades únicas y un comportamiento impredecible dentro de su carnaval.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/at0z7Sx70vU?si=dykEFA8qKGeLE0_1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🎡 Funfair Fever</h3>
+        <p>Nivel run and gun ambientado en una feria, con enemigos rápidos y trampas ocultas a lo largo del recorrido.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yXhYDc2lY8U?si=qLn-NFgNeFHXsn9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🐦 Wally Warbles</h3>
+        <p>Nivel aéreo de múltiples fases en las que se requiere una buena coordinación y timing frente a un pájaro cantor gigante.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/JSK0NLztc88?si=cuHX184FL1Ojl-kK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🐉 Grim Matchstick</h3>
+        <p>Un dragón amigable pero descontrolado. Sus fases finales exigen buenos reflejos para esquivar en espacios reducidos.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yRMeCf6AQ_M?si=q3wSV6LVbqR5RZRZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <h2>🏝️ Isla Tintero III</h2>
+    <article>
+        <h3>🎢 Perilous Piers</h3>
+        <p>Nivel run and gun ambientado en un muelle, con enemigos marinos y plataformas inestables.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TygJfYQYwho?si=Qi8jEt-UDKlrUojQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🧜‍♀️ Cala Maria</h3>
+        <p>Sirena que combate junto a criaturas marinas. Su ataque de hipnosis obliga a mantenerse siempre en movimiento.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2VdgQEQ5_3M?si=OouBArIpC2UpkL6l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🏴‍☠️ Capitán Brineybeard (Captain Brineybeard)</h3>
+        <p>Pirata veterano acompañado de su tripulación. Cada fase introduce un nuevo patrón de ataque naval.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/znxgjXBBBdU?si=GLuCX9H5I4UL_V8j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>⛰️ Rugged Ridge</h3>
+        <p>Nivel run and gun montañoso, uno de los más largos del juego, con enemigos variados y jefes de sección.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nqTiBx3P9hM?si=9kuCmSI9FYcC2ZNs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🤖 Dr. Kahl's Robot</h3>
+        <p>Un robot gigante controlado por el Dr. Kahl, con múltiples formas y ataques mecánicos que se intensifican en cada etapa.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/UZ0mln4EJ4Y?si=EyjnIoFNsjba4_uA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🎭 Sally Stageplay (Teatro)</h3>
+        <p>Jefe teatral con varias transformaciones escénicas. Cada acto de la obra trae un nuevo patrón de ataque.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hXoFaZrRxHU?si=9bzA_thZ-TSVPk3C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>👻 Mausoleo III (opcional)</h3>
+        <p>Último nivel de mausoleo, con los enemigos fantasmas más resistentes de los tres.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oxPcMh2d6OU?si=V8w1UY-B1p69KG_p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🐝 Rumor Honeybottoms (Honeybuttoms)</h3>
+        <p>Reina abeja con un enjambre a su disposición. Sus fases alternan ataques de largo y corto alcance.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8q7CjJBPDko?si=BeQG9qmhxY85JQ4h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🚂 Tren Fantasma (Phantom Express)</h3>
+        <p>Recorrido sobre un tren en movimiento antes del combate contra su maquinista.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/iN2oFTQ0RkQ?si=rV4_3fxpogrYksh_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>💀 Werner Werman</h3>
+        <p>El maquinista fantasma del Tren Fantasma. Combina ataques de rata con maquinaria y vagones descontrolados.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qR3NJ_HrCUc?si=FAUjpDftSBzu59aY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>🎲 King Dice</h3>
+        <p>Guardián del casino del Diablo. Hay que enfrentar a varios de sus secuaces en su tablero antes del combate final contra él.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/avcZtBGysAY?si=l9zcL1eqnSL4ZgCG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <hr>
+    <article>
+        <h3>😈 El Diablo (Diavlo)</h3>
+        <p>El jefe final del juego. Sus múltiples transformaciones ponen a prueba todo lo aprendido a lo largo de la isla.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/E_i8DXcsZgs?si=cO6lDI_Fc4_PlqiI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+</section>
+<section id="monedas">
+    <h2>💰 Monedas Ocultas</h2>
+    <article>
+        <h3>Guía de monedas ocultas</h3>
+        <p>Video con la ubicación de las monedas escondidas a lo largo de los niveles, útiles para desbloquear objetos adicionales en la tienda del Anciano Tetera.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MntZdoCimMo?si=tHtNN1Ir7r6JuvKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+</section>
+<section id="armas">
+    <h2>Armas</h2>
+    <table>
+        <tr>
+            <th>Arma</th>
+            <th>Descripción</th>
+            <th>Recomendación</th>
+        </tr>
+        <tr>
+            <td>Peashooter</td>
+            <td>Arma básica del juego.</td>
+            <td>Ideal para principiantes.</td>
+        </tr>
+        <tr>
+            <td>Spread</td>
+            <td>Mucho daño a corta distancia.</td>
+            <td>Excelente contra varios jefes.</td>
+        </tr>
+    </table>
+</section>
+<section id="secretos">
+    <h2>Secretos</h2>
+    <article>
+        <h3>✈️ Bombas del avión</h3>
+        <p>Truco relacionado con el uso de las bombas aéreas durante el combate contra el Diablo, útil para acelerar una de sus fases.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RlAe9ewSe3w?si=Iy59Qfslar3MfxRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <ul>
+        <li>Secreto 2.</li>
+        <li>Secreto 3.</li>
+    </ul>
+</section>
+<section id="steam">
+    <h2>Comprar Cuphead</h2>
+    <p>
+        Si deseas adquirir el juego de forma oficial,
+        puedes hacerlo desde Steam.
+    </p>
+    <a href="https://store.steampowered.com/app/268910/Cuphead/" target="_blank">
+        Comprar en Steam
+    </a>
+</section>
+</main>
+</body>
+</html>
